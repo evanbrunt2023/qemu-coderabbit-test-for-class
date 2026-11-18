@@ -13,6 +13,14 @@ config MALTA
     select SERIAL_MM
     select SMBUS_EEPROM
 
+config RABBIT
+    bool
+    default y
+    depends on MIPS
+    imply TEST_DEVICES
+    select MIPS_CPS
+    select SERIAL_MM
+
 config JAZZ
     bool
     default y
